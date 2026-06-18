@@ -1,0 +1,10 @@
+e6c6bb4c46902d32666214c02879e7a3ddfb4c207c03ffb5dbb79611c1ccc673  ./LICENSE
+e97972e6cb6bebbfeda913149deff190c0db862aa96973fbbb95b0a160f12455  ./SECURITY.md
+9a49b755d0b19b0ccdcab750a2d4e36beeec8bc2ea9a283bcfa2290866633e8d  ./SKILL.md
+6219f4eb22a7783e235cdb2d4b65b6161f830244d0371d5d401925b24699ec1c  ./agents/openai.yaml
+ca93ccc542a11cb8cb91e90328b0402b210d4e13094ef0e51efc0e6a25e958b0  ./audit/permissions.json
+cb3d16febe9666f63d1c81833ee889729d1beb52a83d464f89c3efe763408df9  ./audit/source.json
+1e014a388c659c28971ee5cd232ca09a80de2257f447914f62c225e8239dec67  ./audit/static-audit.md
+4d8613b774eaa34b51616155ecdcf23fc4237af2e1e8a8cbe4bfcf2fb2fe4a9c  ./references/policy.example.json
+1a4fd56da4107680f048ef024a04924b554aebde2197dad43b8ef525dfad5827  ./scripts/git_safety_check.py
+6baecbe600ccd018fc41f0b81d3d41d2b98b905e7f10bcb2b9bc55e0648a6c00  ./skill-manifest.json

@@ -1,0 +1,1 @@
+{"files":{"read":["input CSV"],"write":["explicit report path"]},"network":["localhost","explicit allowlist"],"external_side_effects":["HTTP requests; write methods blocked by default"]}

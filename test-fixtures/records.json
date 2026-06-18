@@ -1,0 +1,4 @@
+[
+  {"id":"1","name":"Alice","status":"open","updated_at":"2026-06-18"},
+  {"id":"2","name":"Bob","status":"done","updated_at":"2026-06-18"}
+]

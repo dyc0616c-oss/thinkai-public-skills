@@ -1,0 +1,9 @@
+e6c6bb4c46902d32666214c02879e7a3ddfb4c207c03ffb5dbb79611c1ccc673  ./LICENSE
+336ca7c653ff80666dc5d8ef9f183653b357398cdf95389b6d76afb2807b68d4  ./SECURITY.md
+823ee3b8a1a10b052c958e84c85168993871ee5b5df7083f36cc3dae66f466f6  ./SKILL.md
+51ec6fecd6f60306448c7210f48fd3e367dd2622510eea968db3fd9dc49372f6  ./agents/openai.yaml
+5f6cb7e50fce971d8b2f40bce9bbe62db6bfe60c70577f6783214c23ae6cae4b  ./audit/permissions.json
+95e30f2826fda82bf5da2fdb6bcda67b03de7f471de65eee1d5e19fe626ef2f4  ./audit/source.json
+bd0fdd5ca9d36fa650f0c07d8ce3bc103fd61a5ed166e16476564a7a0b3a66c1  ./audit/static-audit.md
+7e9b94642db017dcb3c644dac1a5219132fb08d846863a723c03bf3a7ad64b54  ./scripts/memory_store.py
+c38c3add84c0854b2242de334f16c931a00ffc81018a6dae5155ccc459114c2b  ./skill-manifest.json

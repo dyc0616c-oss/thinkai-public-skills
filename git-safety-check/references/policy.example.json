@@ -1,0 +1,1 @@
+{"protected_branches":["main","master"],"allowed_branch_patterns":["^(feat|feature|fix|bugfix|hotfix|docs|chore)/.+$"],"require_identity":true}

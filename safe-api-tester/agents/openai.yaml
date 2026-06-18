@@ -1,0 +1,4 @@
+interface:
+  display_name: "安全 API 测试器"
+  short_description: "用域名白名单和只读默认策略批量测试 API 并生成报告"
+  default_prompt: "Use $safe-api-tester to test these local API endpoints and generate a redacted report."

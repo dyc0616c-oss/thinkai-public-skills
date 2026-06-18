@@ -1,0 +1,4 @@
+interface:
+  display_name: "表格结构化写入工具"
+  short_description: "先预览新增与覆盖结果，再安全写入结构化 CSV 表格"
+  default_prompt: "Use $structured-sheet-writer to preview and safely upsert this data into a table."

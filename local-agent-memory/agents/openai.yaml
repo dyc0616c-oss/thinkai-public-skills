@@ -1,0 +1,4 @@
+interface:
+  display_name: "本地 Agent 记忆库"
+  short_description: "按独立工作区安全保存、检索、导出和清理长期记忆"
+  default_prompt: "Use $local-agent-memory to save and search project-scoped memories safely."

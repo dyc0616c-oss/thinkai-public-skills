@@ -1,0 +1,4 @@
+interface:
+  display_name: "小团队卡点助手"
+  short_description: "在本地记录卡点、SLA、去重状态并导出复盘数据"
+  default_prompt: "Use $team-blocker-tracker to record and review team blockers without sending notifications."

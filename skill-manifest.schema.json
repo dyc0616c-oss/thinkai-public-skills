@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ThinkAI Public Skill Manifest",
+  "type": "object",
+  "required": ["name", "version", "source", "platforms", "permissions", "safety_defaults"],
+  "properties": {
+    "name": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "version": {"type": "string"},
+    "source": {"type": "object"},
+    "platforms": {"type": "array", "items": {"type": "string"}},
+    "permissions": {"type": "object"},
+    "safety_defaults": {"type": "object"},
+    "review": {"type": "object"}
+  }
+}
