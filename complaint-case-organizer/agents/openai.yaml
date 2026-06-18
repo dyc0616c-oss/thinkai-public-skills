@@ -1,0 +1,4 @@
+interface:
+  display_name: "投诉处理整理助手"
+  short_description: "整理投诉信息、紧急程度、处理建议和后续跟进记录"
+  default_prompt: "Use $complaint-case-organizer to organize these complaints into a reviewable case list."

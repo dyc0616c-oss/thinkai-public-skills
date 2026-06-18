@@ -1,0 +1,4 @@
+interface:
+  display_name: "FAQ 内容优化助手"
+  short_description: "优化常见问题、标准回答、相似问法和用户搜索表达"
+  default_prompt: "Use $faq-content-optimizer to improve these FAQ questions and answers."

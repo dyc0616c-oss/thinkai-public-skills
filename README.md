@@ -1,4 +1,4 @@
-# ThinkAI 首批公共安全版 Skills
+# ThinkAI 公共安全版 Skills
 
 本目录是基于 XSkillHub 原包思路进行的 clean-room 重构，不直接转载原代码。
 
@@ -9,6 +9,11 @@
 | git-safety-check | 可候选上架 | 只读 Git | 分支、身份、改动和敏感文件检查 |
 | structured-sheet-writer | 可候选上架 | 本地文件 | dry-run 后 upsert CSV |
 | team-blocker-tracker | 可候选上架 | 本地文件 | 卡点、SLA、去重、解决和导出 |
+| excel-report-checker | 可候选上架 | 用户提供的文件 | Excel 检查、对比和差异汇总 |
+| daily-report-organizer | 可候选上架 | 用户提供的内容 | 日报、周报和团队进展整理 |
+| shift-schedule-planner | 可候选上架 | 用户提供的排班资料 | 排班草案、冲突和公平性检查 |
+| complaint-case-organizer | 可候选上架 | 用户提供的投诉记录 | 投诉分类、跟进和复盘整理 |
+| faq-content-optimizer | 可候选上架 | 用户提供的 FAQ | 问答优化、相似问法和重复检查 |
 
 ## 当前边界
 
@@ -18,7 +23,7 @@
 
 ## 验证
 
-五个 Skill 已通过：
+全部 Skill 已通过：
 
 - Python 语法编译。
 - `skill-creator/quick_validate.py`。
@@ -35,4 +40,9 @@ npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill saf
 npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill git-safety-check
 npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill structured-sheet-writer
 npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill team-blocker-tracker
+npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill excel-report-checker
+npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill daily-report-organizer
+npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill shift-schedule-planner
+npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill complaint-case-organizer
+npx skills add https://github.com/dyc0616c-oss/thinkai-public-skills --skill faq-content-optimizer
 ```

@@ -1,0 +1,9 @@
+e172e4955dbc300c0196a81dcef0bc182a90b73e1b4618d6db74537970cfc88f  ./LICENSE
+646342b48dbd4b7a3d0dffb43731d9aa6e94cb006e72de2546bc82fe9e55b366  ./README.md
+19732e8442f9eb4d5fb63289d9ab59e4dd0b0532a9b673de271dea1e9c43e423  ./SKILL.md
+e4bdba236b07fff5c90c2ff62165dbb6308febd1ff734698f798437e24eca89b  ./agents/openai.yaml
+39b15c97a67fa1fbca942efdf1d7991be7bddce37f00743b357f0f3f01f8df2d  ./audit/permissions.json
+4b6fb2daf9ec140ac89303254f07e1c0dc312885e4e6a8c74715fbed74091d69  ./audit/source.json
+aa2c0576c70275d54effb75dabc069d7343661423487c735536529e28dc4b06a  ./audit/static-audit.md
+b9fd7a9427a1efafc28315641e4abb5ff5efb90abfeb0455a0f425ff2acfcde4  ./references/case-template.md
+19d08312f9b85744f6fc8e603aa204fa1db35e30d738ba095b90bb98d6abeebb  ./skill-manifest.json

@@ -1,0 +1,4 @@
+interface:
+  display_name: "排班计划助手"
+  short_description: "根据人员、班次和休息要求生成排班草案并检查冲突"
+  default_prompt: "Use $shift-schedule-planner to create a fair shift schedule and check conflicts."
