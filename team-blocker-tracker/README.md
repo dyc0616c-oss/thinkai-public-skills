@@ -1,59 +1,56 @@
 # 小团队卡点助手
 
-一个离线的小团队阻塞事项管理 Skill，用于记录卡点、负责人、优先级、SLA 和解决结果。
+集中记录“事情为什么卡住了、谁在处理、什么时候需要解决”。
 
-## 适合谁
+## 它能解决什么问题
 
-- 需要追踪项目阻塞事项的项目经理。
-- 不想部署完整任务管理平台的小团队。
-- 希望月底导出卡点数据进行复盘的负责人。
+项目推进中，很多问题散落在群聊和口头沟通里：
 
-## 核心能力
+- 测试环境打不开，但没人持续跟进；
+- 某个需求在等确认，却忘了负责人是谁；
+- 同一个问题被不同成员重复记录；
+- 项目结束后无法统计哪些卡点最常发生。
 
-- 创建 P0～P3 卡点。
-- 根据 SLA 自动计算截止时间。
-- 使用去重键避免重复建卡。
-- 查看进行中、已解决和超时状态。
-- 解决卡点并记录结果。
-- 导出 CSV 复盘数据。
+这个 Skill 可以把卡点统一记录下来，提醒处理期限，并在解决后留下结果。
 
-## 安装
+## 你可以这样使用
+
+安装：
 
 ```bash
 npx skills add https://github.com/dyc0616c-oss/team-blocker-tracker
 ```
 
-安装后可对 Agent 说：
+然后直接对 Agent 说：
 
 ```text
-使用 team-blocker-tracker 记录一个 P1 卡点：测试环境无法访问，负责人 Alice，24 小时内处理。
+记录一个紧急卡点：测试环境无法访问，负责人小王，24 小时内处理。
 ```
 
-## 使用示例
-
-```bash
-python3 scripts/blocker_tracker.py --db blockers.sqlite3 add \
-  --title "测试环境无法访问" \
-  --owner Alice \
-  --priority P1 \
-  --sla-hours 24 \
-  --dedup-key test-env-access
-
-python3 scripts/blocker_tracker.py --db blockers.sqlite3 list
-python3 scripts/blocker_tracker.py --db blockers.sqlite3 resolve 1 --note "权限已开通"
-python3 scripts/blocker_tracker.py --db blockers.sqlite3 export --output blockers.csv
+```text
+列出目前还没有解决的卡点，并按紧急程度排序。
 ```
 
-## 安全边界
+```text
+把“测试环境无法访问”标记为已解决，结果是权限已经开通。
+```
 
-- 默认不联网。
-- 不发送 Telegram、飞书或邮件消息。
-- 不调用任何 AI 模型润色催办文案。
-- 不包含聊天平台 Token、群 ID 或账号凭据。
+```text
+导出本月卡点，帮我整理复盘重点。
+```
 
-## 卸载
+## 适合谁
 
-删除 Skill 安装目录。若不再保留数据，再手动删除指定的 SQLite 数据库和 CSV 导出文件。
+- 同时推进多个事项的项目经理；
+- 不想部署复杂管理系统的小团队；
+- 需要定期复盘项目阻塞原因的负责人。
+
+## 数据与隐私
+
+- 数据默认保存在本地；
+- 不会自动向飞书、Telegram 或邮件发送消息；
+- 不需要提供聊天账号、群号或机器人密钥；
+- 删除 Skill 不会自动删除已有的卡点记录。
 
 ## 来源
 

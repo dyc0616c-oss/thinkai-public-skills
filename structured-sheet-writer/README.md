@@ -1,66 +1,51 @@
 # 表格结构化写入工具
 
-一个“先预览、再落盘”的结构化表格写入 Skill。支持将 JSON 或 CSV 数据安全地新增或更新到本地 CSV。
+把一批数据安全整理进 CSV 表格，先预览变化，确认后再写入。
 
-## 适合谁
+## 它能解决什么问题
 
-- 需要批量整理结构化数据的运营人员。
-- 希望根据唯一键更新表格的开发者。
-- 担心批量导入时误覆盖数据的用户。
+批量整理表格时，最常见的问题是列名混乱、重复数据和误覆盖。这个 Skill 可以帮助你：
 
-## 核心能力
+- 把零散数据整理成统一表格；
+- 根据编号、手机号等唯一信息识别重复记录；
+- 区分哪些是新增数据，哪些会更新原记录；
+- 在真正修改文件前先展示变化；
+- 发现缺少关键字段或格式不一致的数据。
 
-- 支持 JSON 和 CSV 输入。
-- 使用 Schema 限制允许的列。
-- 使用一个或多个字段作为唯一键。
-- 写入前显示新增与覆盖数量。
-- 拒绝空键、重复键和未知列。
+## 你可以这样使用
 
-## 安装
+安装：
 
 ```bash
 npx skills add https://github.com/dyc0616c-oss/structured-sheet-writer
 ```
 
-安装后可对 Agent 说：
+然后直接对 Agent 说：
 
 ```text
-使用 structured-sheet-writer 预览这批 JSON 数据写入 CSV 后的变化。
+把这批客户数据整理进 CSV，先告诉我会新增和更新多少条，不要立即写入。
 ```
 
-## 使用示例
-
-先预览：
-
-```bash
-python3 scripts/sheet_writer.py \
-  --input records.json \
-  --target table.csv \
-  --schema references/schema.example.json \
-  --key id
+```text
+以员工编号作为唯一标识，检查新旧两份数据是否有重复。
 ```
 
-确认后写入：
-
-```bash
-python3 scripts/sheet_writer.py \
-  --input records.json \
-  --target table.csv \
-  --schema references/schema.example.json \
-  --key id \
-  --apply
+```text
+我确认预览结果了，把数据写入目标表格。
 ```
 
-## 安全边界
+## 适合谁
 
-- 默认 dry-run，不会修改目标文件。
-- 仅访问用户明确提供的输入、Schema 和目标路径。
-- 当前公共版不连接 Google Sheets，也不读取 Google 凭据。
-- upsert 键冲突时不会静默覆盖。
+- 经常整理名单、客户或运营数据的人；
+- 需要合并多批表格的小团队；
+- 担心批量操作误覆盖原数据的用户。
 
-## 卸载
+## 使用提醒
 
-删除 Skill 安装目录。用户生成的 CSV 文件不会被自动删除。
+- 默认只预览，不会直接修改表格；
+- 只有得到确认后才会写入；
+- 只读取你明确提供的文件；
+- 当前版本处理本地 CSV，不直接连接在线表格账号。
 
 ## 来源
 

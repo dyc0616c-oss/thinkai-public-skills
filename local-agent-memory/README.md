@@ -1,57 +1,56 @@
 # 本地 Agent 记忆库
 
-一个强调隐私与项目隔离的本地长期记忆 Skill。它使用 SQLite 保存项目事实、技术决策和待办背景，不依赖云端数据库。
+让 AI 记住一个项目里的重要信息，下次继续工作时不用重新解释。
 
-## 适合谁
+## 它能解决什么问题
 
-- 需要让 Agent 记住项目约定的个人开发者。
-- 同时维护多个项目，且不希望记忆互相污染的用户。
-- 希望记忆数据完全保存在本机的小团队。
+你可能经常需要重复告诉 AI：
 
-## 核心能力
+- 这个项目使用什么技术和工具；
+- 哪些方案已经确定，不要反复讨论；
+- 团队有哪些固定规则；
+- 上次做到哪里，还有哪些事情没完成。
 
-- 按工作区隔离记忆。
-- 新增、检索、查看、删除和导出记忆。
-- 支持设置过期时间并清理过期记录。
-- 写入前自动遮蔽常见 Token、密码和私钥格式。
+这个 Skill 会把这些信息保存在当前项目中，并将不同项目的记忆分开，避免互相混淆。
 
-## 安装
+## 你可以这样使用
+
+安装：
 
 ```bash
 npx skills add https://github.com/dyc0616c-oss/local-agent-memory
 ```
 
-安装后可对 Agent 说：
+然后直接对 Agent 说：
 
 ```text
-使用 local-agent-memory 记住：这个项目统一使用 PostgreSQL。
+记住：这个项目统一使用 PostgreSQL。
 ```
 
-## 命令示例
-
-```bash
-python3 scripts/memory_store.py --workspace demo add \
-  --title "数据库选择" --content "统一使用 PostgreSQL"
-
-python3 scripts/memory_store.py --workspace demo search "PostgreSQL"
-python3 scripts/memory_store.py --workspace demo list
-python3 scripts/memory_store.py --workspace demo delete 1
+```text
+帮我查一下这个项目之前确定了哪些技术方案。
 ```
 
-## 数据位置
+```text
+忘掉刚才保存的数据库选择。
+```
 
-默认保存在当前项目的 `.agent-memory/`。每个工作区会生成独立 SQLite 文件。
+```text
+把这个项目的记忆整理并导出。
+```
 
-## 安全边界
+## 适合谁
 
-- 默认不联网。
-- 不会主动扫描 Claude、浏览器或整个用户目录。
-- 自动脱敏只能降低误写风险，不能代替用户检查。
-- 删除记忆时必须提供准确的记录 ID。
+- 经常与 AI 一起推进长期项目的人；
+- 同时维护多个项目的人；
+- 不希望项目资料上传到云端的个人和小团队。
 
-## 卸载
+## 隐私与安全
 
-删除 Skill 安装目录。若不再需要历史记忆，再手动删除项目中的 `.agent-memory/`。
+- 记忆默认保存在当前项目的 `.agent-memory/` 文件夹；
+- 默认不联网，也不会读取浏览器或其他项目；
+- 保存时会尝试隐藏常见密码和密钥；
+- 删除 Skill 不会自动删除已经保存的记忆。
 
 ## 来源
 
